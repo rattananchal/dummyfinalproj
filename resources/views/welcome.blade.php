@@ -20,6 +20,7 @@
                 margin: 0;
             }
 
+
             .full-height {
                 height: 100vh;
             }
@@ -66,7 +67,7 @@
     <body>
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
-                <div class="top-right links">
+                <div class="top-right links teal">
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
                     @else
