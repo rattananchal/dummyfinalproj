@@ -7,6 +7,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use App\Profile;
 use App\Question;
+use App\Answer;
 
 
 /**
@@ -65,5 +66,10 @@ class User extends Authenticatable
     public function question()
     {
         return $this ->hasMany('App\Question');
+    }
+
+    public function answer()
+    {
+        return $this ->hasMany('App\Answer');
     }
 }
