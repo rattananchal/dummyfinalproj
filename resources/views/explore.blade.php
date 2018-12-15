@@ -10,15 +10,47 @@
 
                     <div class="card-body">
 
-                        {{$question->body}}
+                         {{--{{$questions ->body}}--}}
+                        {{--{{$questions}}--}}
+                        <div class="card-deck">
+
+                        @foreach($questions as $question)
+                                <div class="col-sm-4 d-flex align-items-stretch">
+                                    <div class="card mb-3 ">
+
+                                        <div class="card-header">
+                                            <small class="text-muted">
+                                                Updated: {{ $question->created_at->diffForHumans() }}
+                                                {{--Answers: {{ $question->answers()->count() }}--}}
+
+                                            </small>
+                                        </div>
+                                        <div class="card-body">
+                                            <p>{{$question -> body}}</p>
+                                        </div>
+                                        <div class="card-footer">
+                                            <p class="card-text">
+
+                                                <a class="btn btn-primary float-right"
+                                                   href="#">
+                                                    Subscribe
+                                                </a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                        @endforeach
+
+
+                        </div>
                     </div>
 
-                    <div class="card-footer">
+                   {{-- <div class="card-footer">
                         <a class="btn btn-primary float-right"
                            href="#">
                             Subscribe
                         </a>
-                    </div>
+                    </div>--}}
 
                 </div>
             </div>

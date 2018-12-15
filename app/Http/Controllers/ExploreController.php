@@ -20,8 +20,10 @@ class ExploreController extends Controller
     public function index()
     {
         $user = Auth:: user();
-        $question = $user -> question() -> paginate (6);
-        return view ('home') -> with ('questions', $question);
+        $question = Question::all();
+
+       /* return view ('home') -> with ('questions', $question);*/
+        return view('explore',['questions'=> $question]);
     }
 
     /**
