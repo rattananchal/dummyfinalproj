@@ -7,6 +7,7 @@ use App\User;
 
 class Profile extends Model
 {
+    protected $fillable = ['fname', 'lname', 'about_you'];
     //
     public function user()
     {
