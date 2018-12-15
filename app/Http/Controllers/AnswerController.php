@@ -3,9 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Answer;
+use App\Question;
+use Illuminate\Support\Facades\Auth;
 
 class AnswerController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -43,9 +50,10 @@ class AnswerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($question,  $answer)
     {
-        //
+        $answer = Answer::find($answer);
+        return view('answer')->with(['answer' => $answer, 'question' => $question]);
     }
 
     /**
