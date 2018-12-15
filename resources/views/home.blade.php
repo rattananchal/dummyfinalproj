@@ -32,7 +32,7 @@
                             <div class="card-header" >Your Questions
 
 
-                                <a class="btn btn-primary float-right" href="#">
+                                <a class="btn btn-primary float-right" href="{{ url('/explore') }}">
                                     Explore More
                                 </a>
 

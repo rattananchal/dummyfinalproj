@@ -19,8 +19,9 @@ class ExploreController extends Controller
      */
     public function index()
     {
-        //
-
+        $user = Auth:: user();
+        $question = $user -> question() -> paginate (6);
+        return view ('home') -> with ('questions', $question);
     }
 
     /**
@@ -50,10 +51,9 @@ class ExploreController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Question $question)
     {
-        //
-
+        return view('explore')->with('question', $question);
     }
 
     /**

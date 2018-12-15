@@ -34,7 +34,7 @@ Route::patch('/questions/{question_id}/answer/{answer_id}', 'AnswerController@up
 Route::delete('/questions/{question_id}/answer/{answer_id}', 'AnswerController@destroy')->name('answer.destroy');
 
 
-Route::get('/question/{question_id}', 'ExploreController@show')->name('explore.show');
+Route::get('/explore', 'ExploreController@show')->name('explore');
 
 Route::resources([
     'question' => 'QuestionController',
