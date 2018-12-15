@@ -28,5 +28,7 @@ class HomeController extends Controller
         $user = Auth:: user();
         $question = $user -> question() -> paginate (6);
         return view ('home') -> with ('questions', $question);
+
+
     }
 }

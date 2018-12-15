@@ -23,7 +23,7 @@
 
                 <ul class="nav nav-tabs">
                     <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
-                    <li><a data-toggle="tab" href="#menu1">Menu 1</a></li>
+                    <li><a data-toggle="tab" href="#explore">Explore</a></li>
                 </ul>
 
                 <div class="tab-content">
@@ -53,7 +53,7 @@
                                                     <div class="card-footer">
                                                         <p class="card-text">
 
-                                                            <a class="btn btn-primary float-right" href="3">
+                                                            <a class="btn btn-primary float-right" href="{{ route('question.show', ['id' => $question->id]) }}">
                                                                 View
                                                             </a>
                                                         </p>
@@ -81,8 +81,8 @@
                     </div>
 
 
-                    <div id="menu1" class="tab-pane fade">
-                        <h3>Menu 1</h3>
+                    <div id="explore" class="tab-pane fade">
+                        <h3>Explore</h3>
                         <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                     </div>
 
