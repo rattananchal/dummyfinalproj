@@ -6,7 +6,7 @@
 
 <div class="container" id="tabs">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
 
             <div class="card-body">
                 @if (session('status'))
@@ -21,20 +21,26 @@
             <div class="card">
 
 
-                <ul class="nav nav-tabs">
+             {{--   <ul class="nav nav-tabs">
                     <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
                     <li><a data-toggle="tab" href="#explore">Explore</a></li>
-                </ul>
+                </ul>--}}
 
-                <div class="tab-content">
+               {{-- <div class="tab-content">
                     <div id="home" class="tab-pane fade in active">
-                        <div class="card" >
-                            <div class="card-header" id="home">Questions
+                        <div class="card" >--}}
+                            <div class="card-header" >Your Questions
+
+
                                 <a class="btn btn-primary float-right" href="#">
+                                    Explore More
+                                </a>
+
+                                <a class="btn btn-primary float-right mr-2" href="#">
                                     Create a Question
                                 </a>
 
-                                <div class="card-body" id="home">
+                                <div class="card-body" >
 
                                     <div class="card-deck">
                                         @forelse($questions as $question)
@@ -65,7 +71,7 @@
                                         @endforelse
 
 
-                                    </div>
+                                    {{--</div>--}}
 
                                 </div>
                             </div>
@@ -76,31 +82,19 @@
                             </div>
 
 
-                        </div>
+                      {{--  </div>
 
-                    </div>
+                    </div>--}}
 
 
-                    <div id="explore" class="tab-pane fade">
+                   {{-- <div id="explore" class="tab-pane fade">
                         <h3>Explore</h3>
                         <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    </div>
+                    </div>--}}
 
-                </div>
+                {{--</div>--}}
             </div>
-{{--            <div class="card" >
-                <div class="card-header" id="dashboard">Dashboard</div>
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    You are logged in!
-                </div>
-            </div>--}}
 
         </div>
     </div>
