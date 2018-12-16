@@ -40,5 +40,9 @@ Route::resources([
 ]);
 
 Route::resources([
+    'detail' => 'DetailController',
+]);
+
+Route::resources([
     'question' => 'QuestionController',
 ]);

@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use App\User;
 use App\Question;
+use App\Detail;
 
 class Answer extends Model
 {
@@ -18,5 +19,10 @@ class Answer extends Model
     public function question()
     {
         return $this -> belongsTo('App\Question');
+    }
+
+    public function detail()
+    {
+        return $this -> belongsTo('App\Detail');
     }
 }

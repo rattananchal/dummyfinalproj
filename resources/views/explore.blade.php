@@ -32,7 +32,7 @@
                                             <p class="card-text">
 
                                                 <a class="btn btn-primary float-right"
-                                                   href="#">
+                                                   href="{{ route('detail.show', ['$question' => $question]) }} ">
                                                     Subscribe
                                                 </a>
                                             </p>

@@ -4,15 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Detail;
 use Illuminate\Http\Request;
-use App\Question;
-use Illuminate\Support\Facades\Auth;
 
-class ExploreController extends Controller
+class DetailController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
     /**
      * Display a listing of the resource.
      *
@@ -20,11 +14,10 @@ class ExploreController extends Controller
      */
     public function index()
     {
-        $user = Auth:: user();
-        $question = Question::all();
+        //
+        $detail = Detail::all();
 
-       /* return view ('home') -> with ('questions', $question);*/
-        return view('explore',['questions'=> $question]);
+        return view('detail',['detail'=> $detail]);
     }
 
     /**
@@ -56,8 +49,7 @@ class ExploreController extends Controller
      */
     public function show(Detail $detail)
     {
-        /*$user = Auth:: user();*/
-        /*$question = Question::all();*/
+        //
         return view('detail',['detail'=> $detail]);
     }
 
