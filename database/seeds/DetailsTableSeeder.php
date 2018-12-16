@@ -14,8 +14,22 @@ class DetailsTableSeeder extends Seeder
     public function run()
     {
         //
-        $question = App\Question::all();
+        /*$question = App\Question::all();
         $question -> each (function ($question)
+        {
+
+
+
+            $detail = factory(\App\Detail::class)->make();
+            $detail -> question() -> associate ($question);
+            $detail ->save();
+
+        });
+        $answer = App\Answer::all();
+        $answer = DB::table('questin') -> crossJoin('answer') -> on ('question_id');
+        */
+         $question = App\Question::all();
+         $question -> each (function ($question)
         {
             $question = App\Question::inRandomOrder() -> first ();
             $answer = factory(\App\Answer::class) -> make();
@@ -26,5 +40,6 @@ class DetailsTableSeeder extends Seeder
             $detail ->save();
 
         });
+
     }
 }
