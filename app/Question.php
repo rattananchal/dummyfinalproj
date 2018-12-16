@@ -9,6 +9,9 @@ use App\Answer;
 class Question extends Model
 {
     //
+    protected $fillable = ['body'];
+    private $errors;
+
     public function user()
     {
         return $this -> belongsTo('App\User');

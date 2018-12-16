@@ -8,6 +8,7 @@ use App\Question;
 
 class Answer extends Model
 {
+    protected $fillable = ['body'];
     //
     public function user()
     {
