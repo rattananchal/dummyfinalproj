@@ -10,6 +10,14 @@
     #dropdownmenu{
         font-size: medium;
     }*/
+    html, body {
+        background-color: #ecf9f1;
+        color: #636b6f;
+        font-family: 'Nunito', sans-serif;
+        font-weight: 200;
+        height: 100vh;
+        margin: 0;
+    }
 
 </style>
 <head>

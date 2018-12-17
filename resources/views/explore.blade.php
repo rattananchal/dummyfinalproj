@@ -33,7 +33,7 @@
 
                                                 <a class="btn btn-primary float-right"
                                                    href="{{ route('detail.show', ['$question' => $question]) }} ">
-                                                    Subscribe
+                                                    View
                                                 </a>
                                             </p>
                                         </div>

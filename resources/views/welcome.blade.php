@@ -12,7 +12,7 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
+                background-color: #ecf9f1;
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
@@ -49,7 +49,8 @@
                 font-size: 84px;
             }
 
-            .links > a {
+             a:link, a:visited {
+                background-color: #d9f2e4;
                 color: #636b6f;
                 padding: 0 25px;
                 font-size: 13px;
@@ -57,6 +58,11 @@
                 letter-spacing: .1rem;
                 text-decoration: none;
                 text-transform: uppercase;
+                display: inline-grid ;
+            }
+            a:hover, a:active {
+                background-color:#79d2a0;
+                text-decoration: #1b1e21;
             }
 
             .m-b-md {
