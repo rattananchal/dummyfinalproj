@@ -20,6 +20,8 @@ class CreateDetailsTable extends Migration
             $table->longText('answer_body');
             $table->timestamps();
         });
+
+
     }
 
     /**

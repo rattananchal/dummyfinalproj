@@ -15,9 +15,11 @@ class DetailController extends Controller
     public function index()
     {
         //
-        $detail = Detail::all();
+       /* $detail = Detail::all();
 
-        return view('detail',['detail'=> $detail]);
+        return view('detail',['detail'=> $detail]);*/
+
+
     }
 
     /**

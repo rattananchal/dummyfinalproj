@@ -41,4 +41,9 @@
                     </div>
                 </div>
             </div>
+            <a class="btn btn-primary float-right"
+               href="{{ url('explore') }}">
+                Back
+            </a>
+        </div>
 @endsection

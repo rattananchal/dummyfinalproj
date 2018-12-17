@@ -13,6 +13,14 @@ class DetailsTableSeeder extends Seeder
      */
     public function run()
     {
+
+
+      /*  $result = DB::table('questions')
+            ->join('answers','id','=','answers.question_id')
+            ->select('questions.id','questions.body','answers.body')
+            ->get();
+        $result->save();*/
+
         //
         /*$question = App\Question::all();
         $question -> each (function ($question)
@@ -28,6 +36,9 @@ class DetailsTableSeeder extends Seeder
         $answer = App\Answer::all();
         $answer = DB::table('questin') -> crossJoin('answer') -> on ('question_id');
         */
+
+
+
          $question = App\Question::all();
          $question -> each (function ($question)
         {
